@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "524993900768",
+    "project_id": "link-up-chat-22f61",
+    "storage_bucket": "link-up-chat-22f61.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524993900768:android:698367f7805e74550ba085",
+        "android_client_info": {
+          "package_name": "com.fatema.linkup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoXL9WupNsgebu_m20te1royfP0hDEI24"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
