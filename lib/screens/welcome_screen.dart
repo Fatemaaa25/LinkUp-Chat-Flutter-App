@@ -56,58 +56,68 @@ class _WelcomeScreenState extends State<WelcomeScreen>
               Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Hero(
-                    tag: 'logo',
-                    child: Container(
-                      child: Image.asset('images/logo.png', height: 350),
+                  Flexible(
+                    child: Hero(
+                      tag: 'logo',
+                      child: Image.asset('images/logo.png', height: 320),
                     ),
                   ),
-                  Transform.translate(
-                    offset: const Offset(0, -100),
-                    child: AnimatedTextKit(
-                      repeatForever: true,
-                      animatedTexts: [
-                        TypewriterAnimatedText(
-                          'LinkUp',
-                          speed: Durations.short3,
-                          textStyle: TextStyle(
-                            color: Color(0xFF005B5F),
-                            fontSize: 45,
-                            fontWeight: FontWeight.w900,
-                            height: 0.1,
-                          ),
+
+                  SizedBox(height: 10),
+
+                  AnimatedTextKit(
+                    repeatForever: true,
+                    animatedTexts: [
+                      TypewriterAnimatedText(
+                        'LinkUp',
+                        speed: const Duration(milliseconds: 150),
+                        textStyle: TextStyle(
+                          color: Color(0xFF005B5F),
+                          fontSize: 45,
+                          fontWeight: FontWeight.w900,
                         ),
-                      ],
-                    ),
-                  ),
-                  Transform.translate(
-                    offset: const Offset(0, -70),
-                    child: Text(
-                      'CONNECT . CHAT . LINK UP',
-                      style: TextStyle(
-                        color: Color(0xFFD08C60),
-                        fontSize: 10,
-                        fontWeight: FontWeight.w900,
-                        height: 0.1,
                       ),
+                    ],
+                  ),
+
+                  SizedBox(height: 6),
+
+                  Text(
+                    'CONNECT . CHAT . LINK UP',
+                    style: TextStyle(
+                      color: Color(0xFFD08C60),
+                      fontSize: 10,
+                      fontWeight: FontWeight.w900,
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 48.0),
-              RoundedButton(colour:Color(0xFFD08C60),onPressed:() {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => LoginScreen()),
-                );
-              },text:'Login'),
-              RoundedButton(colour:Color(0xFF005B5F),onPressed:() {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => RegistrationScreen()),
-                );
-              },text:'Register')
 
+              SizedBox(height: 40),
+
+              RoundedButton(
+                colour: Color(0xFFD08C60),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
+                  );
+                },
+                text: 'Login',
+              ),
+
+              RoundedButton(
+                colour: Color(0xFF005B5F),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => RegistrationScreen(),
+                    ),
+                  );
+                },
+                text: 'Register',
+              ),
             ],
           ),
         ),
@@ -115,4 +125,3 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     );
   }
 }
-
